@@ -40,11 +40,21 @@ server {
 
 	server_name _;
 
-	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to displaying a 404.
-		try_files $uri $uri/ =404;
-	}
+        location /new-ui {
+            try_files $uri $uri/ @returnnewuiindex;
+        }
+
+        location @returnnewuiindex {
+            rewrite /new-ui/(.*) /new-ui/index.html  break;
+        }
+
+        location / {
+            try_files $uri $uri/ @returnindex;
+        }
+
+        location @returnindex {
+            rewrite /(.*) /index.html  break;
+        }
 
 	# pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 	#
