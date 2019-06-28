@@ -8,5 +8,5 @@
 # /vagrant/vagrant/ubuntu16/scripts/nodejs-v6-install.sh
 # /vagrant/vagrant/ubuntu16/scripts/nodejs-v8-install.sh
 
-/vagrant/vagrant/ubuntu16/scripts/repos-prepare.sh
-/vagrant/vagrant/ubuntu16/scripts/repos-build.sh
+# /vagrant/vagrant/ubuntu16/scripts/repos-prepare.sh
+# /vagrant/vagrant/ubuntu16/scripts/repos-build.sh
