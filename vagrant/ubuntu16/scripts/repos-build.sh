@@ -9,6 +9,7 @@ cd "${reposDir}"
 for repoName in `ls -1 ${reposDir}`; do
     echo "==== ${repoName}"
     cd ${repoName}
+    git pull
     npm install
     npm run build
     cd ..
